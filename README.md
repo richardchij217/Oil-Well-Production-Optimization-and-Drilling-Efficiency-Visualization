@@ -1,4 +1,3 @@
-````markdown
 # Oil Well Production Optimization & Drilling Efficiency Analysis
 
 > **A comprehensive Business Intelligence and Data Analytics project that explores oil production performance, drilling efficiency, geospatial distribution, and machine learning clustering using Python and interactive visualizations.**
@@ -282,5 +281,4 @@ Oil-Well-Production-Optimization
 ---
 
 ⭐ *If you found this project interesting, feel free to star the repository.*
-````
 
