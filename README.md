@@ -1,81 +1,56 @@
 # Oil Well Production Optimization & Drilling Efficiency Analysis
 
-> **A comprehensive Business Intelligence and Data Analytics project that explores oil production performance, drilling efficiency, geospatial distribution, and machine learning clustering using Python and interactive visualizations.**
+> A comprehensive Business Intelligence and Data Analytics project that explores oil well production performance, drilling efficiency, geospatial distribution, and machine learning clustering using Python and interactive visualizations.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow)
-![GeoPandas](https://img.shields.io/badge/GeoPandas-Spatial%20Analysis-green)
+![GeoPandas](https://img.shields.io/badge/GeoPandas-Spatial%20Analysis-success)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-KMeans-red)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
 ---
 
 # Project Overview
 
-The oil and gas industry generates enormous volumes of operational and production data every day. Transforming this information into actionable business intelligence is essential for improving drilling efficiency, maximizing production, reducing operational costs, and supporting strategic field development.
+Oil and gas companies continuously monitor drilling performance and well production to maximize recovery while minimizing operational costs.
 
-This project combines **production analytics**, **drilling performance analysis**, **geospatial visualization**, and **machine learning** to evaluate historical oil well data and identify patterns that support operational decision-making.
+This project integrates drilling logs, oil production data, and geospatial analysis into an interactive Business Intelligence solution. Using Python for data preprocessing and Tableau for visualization, the project identifies production trends, drilling efficiency patterns, spatial distribution of wells, and operational clusters.
 
-The project was completed as part of a Data Visualization and Business Intelligence coursework using Python and modern data analytics libraries.
+The analysis combines traditional data analytics with machine learning techniques to generate actionable insights for engineers and decision-makers.
 
 ---
 
 # Business Objectives
 
-The primary objectives of this project were to:
-
-- Analyze historical oil production trends.
-- Evaluate drilling efficiency using operational drilling parameters.
-- Identify high-performing wells and production regions.
-- Explore spatial distribution of petroleum wells across Ontario.
-- Detect operational patterns using Machine Learning.
-- Build interactive visualizations that communicate engineering insights.
-- Generate actionable business recommendations for field operations.
+- Evaluate oil production performance across wells.
+- Analyze drilling efficiency using Rate of Penetration (ROP).
+- Identify production trends and operational bottlenecks.
+- Visualize spatial distribution of oil wells across Ontario.
+- Discover production patterns using K-Means clustering.
+- Support data-driven operational decision making.
 
 ---
 
-# Data Sources
+# Dataset
 
-This project integrates multiple publicly available datasets.
+## Source of Datasets
 
-| Dataset | Description | Source |
-|---------|-------------|--------|
-| **ROP (Rate of Penetration) Dataset** | Drilling operational parameters including ROP, RPM, WOB, Torque, Pump Pressure and drilling logs. | https://www.kaggle.com/datasets/ahmedelbashir99/drilling-log-dataset |
-| **Oil Well Production Dataset** | Historical production records used for production trend and reservoir performance analysis. | https://www.kaggle.com/datasets/ruslanzalevskikh/oil-well |
-| **Ontario Well Shapefile** | Geographic boundaries and petroleum well locations used for geospatial visualization. | https://open.canada.ca/data/dataset/235fcd04-6632-4cce-a403-556089cc4276/resource/d5fbee67-c36a-4044-997d-ebe809a0073a |
+- **ROP Dataset:** https://www.kaggle.com/datasets/ahmedelbashir99/drilling-log-dataset
+- **Oil Well Production Dataset:** https://www.kaggle.com/datasets/ruslanzalevskikh/oil-well
+- **Ontario Shapefile:** https://open.canada.ca/data/dataset/235fcd04-6632-4cce-a403-556089cc4276/resource/d5fbee67-c36a-4044-997d-ebe809a0073a
 
 ---
 
-# Data Preparation
-
-The datasets were cleaned and transformed before analysis.
-
-The preprocessing workflow included:
-
-- Missing value treatment
-- Duplicate removal
-- Data type conversion
-- Feature engineering
-- Date formatting
-- Aggregation of production records
-- Spatial data integration using GeoPandas
-- Dataset merging
-- Data normalization for clustering analysis
-
----
-
-# Tools & Technologies
+# Technologies Used
 
 - Python
 - Pandas
 - NumPy
-- Matplotlib
-- Seaborn
-- Plotly
 - GeoPandas
-- Scikit-learn
+- Scikit-Learn
 - K-Means Clustering
-- Ruptures (Change Point Detection)
+- Tableau Desktop
+- Tableau Maps
 - Jupyter Notebook
 
 ---
@@ -83,188 +58,195 @@ The preprocessing workflow included:
 # Project Workflow
 
 ```
-Raw Data
-      │
-      ▼
-Data Cleaning
-      │
-      ▼
+Data Collection
+        │
+        ▼
+Data Cleaning & Preprocessing
+        │
+        ▼
 Exploratory Data Analysis
-      │
-      ▼
-Production Analysis
-      │
-      ▼
-Drilling Performance Analysis
-      │
-      ▼
-Geospatial Visualization
-      │
-      ▼
-Machine Learning (K-Means)
-      │
-      ▼
-Business Insights
-      │
-      ▼
-Recommendations
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Machine Learning Clustering
+        │
+        ▼
+Geospatial Analysis
+        │
+        ▼
+Interactive Tableau Dashboards
+        │
+        ▼
+Business Insights & Recommendations
 ```
 
 ---
 
-# Analysis Performed
+# Dashboard 1 — Oil Production Performance
 
-## Production Analysis
+This dashboard provides an executive overview of oil production performance across all wells.
 
-- Oil Production
-- Gas Production
-- Water Production
-- Liquid Production
-- Water Cut
-- Production Trend Analysis
+### Key Metrics
+
+- Total Oil Production
+- Average Production
+- Highest Producing Wells
+- Production Distribution
+- Production Trends
+
+<img src="images/oil-production-dashboard.png" width="100%">
+
+### Insights
+
+- Production varies significantly across wells.
+- A small percentage of wells contribute the majority of production.
+- Several wells consistently outperform the field average.
+- Production distribution is highly skewed.
 
 ---
 
-## Drilling Performance
+# Dashboard 2 — Drilling Performance
 
-The drilling dataset was analyzed using several operational parameters including:
+This dashboard evaluates drilling efficiency and operational performance.
+
+### Key Metrics
 
 - Rate of Penetration (ROP)
-- Weight on Bit (WOB)
-- Rotary Speed (RPM)
-- Torque
-- Pump Pressure
-- Mud Flow Parameters
+- Drilling Depth
+- Drilling Time
+- Operational Performance
+- Drilling Trend Analysis
 
-These variables were explored to identify relationships affecting drilling efficiency.
+<img src="images/Drilling.png" width="100%">
 
----
+### Insights
 
-## Machine Learning
-
-K-Means clustering was implemented to group drilling operations into similar performance categories.
-
-The clustering analysis identified drilling strategy groups that can support operational optimization and benchmarking.
+- Higher ROP generally reduces drilling time.
+- Certain drilling intervals exhibit reduced efficiency.
+- Operational performance varies across drilling phases.
+- Optimization opportunities exist during slower drilling periods.
 
 ---
 
-## Geospatial Analysis
+# Dashboard 3 — Geospatial Analysis
 
-Using GeoPandas and the Ontario petroleum well shapefile, petroleum wells were visualized geographically to reveal regional drilling activity and production distribution.
+This dashboard visualizes oil well locations and production performance geographically.
 
----
+### Key Metrics
 
-## Time Series Analysis
+- Oil Well Distribution
+- Regional Production
+- Geographic Clusters
+- Spatial Density
+- Production by Location
 
-Historical production trends were evaluated to identify:
+<img src="images/geospatial-dashboard.png" width="100%">
 
-- Production decline
-- Production growth
-- Reservoir performance changes
-- Long-term operational behavior
+### Insights
 
----
-
-# Project Visualizations
-
-## Production Dashboard
-
-*(Insert screenshot in `/images/production_dashboard.png`)*
-
-```markdown
-![Production Dashboard](images/production_dashboard.png)
-```
+- Production is concentrated within specific Ontario regions.
+- Geographic clustering reveals operational hotspots.
+- Regional differences indicate varying reservoir characteristics.
+- Spatial visualization supports infrastructure planning.
 
 ---
 
-## Drilling Performance Dashboard
+# Dashboard 4 — Machine Learning Clustering
 
-*(Insert screenshot in `/images/drilling_dashboard.png`)*
+K-Means clustering groups oil wells with similar production characteristics.
 
-```markdown
-![Drilling Dashboard](images/drilling_dashboard.png)
-```
+### Key Metrics
 
----
+- Production Clusters
+- Well Similarity
+- Cluster Distribution
+- High-Performance Wells
+- Low-Performance Wells
 
-## Geospatial Dashboard
+<img src="images/clustering-results.png" width="100%">
 
-*(Insert screenshot in `/images/geospatial_dashboard.png`)*
+### Insights
 
-```markdown
-![Geospatial Dashboard](images/geospatial_dashboard.png)
-```
-
----
-
-## Clustering Results
-
-*(Insert screenshot in `/images/clustering.png`)*
-
-```markdown
-![Clustering Results](images/clustering.png)
-```
+- Four distinct operational clusters were identified.
+- High-producing wells share similar operational characteristics.
+- Low-performing wells represent opportunities for optimization.
+- Cluster analysis supports production forecasting and maintenance planning.
 
 ---
 
-# Key Insights
+# Business Insights
 
-- Historical production exhibits a gradual decline consistent with mature oil reservoirs.
-- Water production increases over time, indicating changing reservoir conditions.
-- Drilling operational parameters significantly influence Rate of Penetration.
-- K-Means clustering successfully identified distinct drilling performance groups.
-- Ontario petroleum wells are spatially concentrated in key production regions.
-- Geospatial visualization highlights regional drilling activity and operational density.
-- Production analytics provide valuable insight for field optimization and long-term planning.
+- Oil production is concentrated among a limited number of high-performing wells.
+- Drilling efficiency significantly impacts overall production performance.
+- Geographic analysis reveals production hotspots across Ontario.
+- Machine learning successfully identifies operational patterns.
+- Combining production, drilling, and spatial analytics improves operational visibility.
 
 ---
 
 # Business Recommendations
 
-- Continuously monitor production trends to detect early performance decline.
-- Optimize drilling parameters based on high-performing drilling clusters.
-- Use spatial analytics to support future well placement decisions.
-- Apply predictive analytics for production forecasting.
-- Expand machine learning models to optimize drilling operations in real time.
-- Integrate dashboards into operational monitoring systems for continuous decision support.
+- Prioritize maintenance for high-performing wells.
+- Investigate operational practices from successful drilling operations.
+- Allocate resources toward high-potential production regions.
+- Monitor drilling efficiency continuously using ROP dashboards.
+- Utilize clustering results for predictive maintenance and production planning.
 
 ---
 
 # Repository Structure
 
 ```
-Oil-Well-Production-Optimization
+Oil-Well-Production-Optimization-and-Drilling-Efficiency-Visualization
 │
-├── README.md
-├── notebooks
-│   └── PROJECT FOR DATASET VISUALIZATION FINAL.ipynb
+├── images/
+│   ├── oil-production-dashboard.png
+│   ├── Drilling.png
+│   ├── geospatial-dashboard.png
+│   └── clustering-results.png
 │
-├── data
-│   └── README.md
+├── notebooks/
+│   └── Oil_Well_Analysis.ipynb
 │
-├── images
-│   ├── production_dashboard.png
-│   ├── drilling_dashboard.png
-│   ├── geospatial_dashboard.png
-│   └── clustering.png
-│
-├── reports
+├── reports/
 │   └── Business_Intelligence_Report.pdf
 │
-└── presentation
-    └── Presentation.pdf
+├── data/
+│   └── Dataset Links.txt
+│
+└── README.md
 ```
 
 ---
 
 # Future Improvements
 
-- Predictive production forecasting
-- Deep learning production models
-- Interactive Streamlit dashboard
-- Real-time drilling monitoring
-- Reservoir decline curve analysis
-- Advanced drilling optimization models
+- Predict oil production using machine learning regression models.
+- Develop real-time production dashboards.
+- Integrate drilling sensor streaming data.
+- Implement anomaly detection for drilling operations.
+- Deploy dashboards using Tableau Public.
+
+---
+
+# Skills Demonstrated
+
+- Business Intelligence
+- Data Analytics
+- Exploratory Data Analysis
+- Data Cleaning
+- Feature Engineering
+- Machine Learning
+- K-Means Clustering
+- Geospatial Analytics
+- Dashboard Design
+- Tableau
+- Python
+- Pandas
+- GeoPandas
+- Data Storytelling
 
 ---
 
@@ -272,13 +254,13 @@ Oil-Well-Production-Optimization
 
 **Richard Amarachi Chijioke**
 
-**Master of Data Science**
+Master of Data Science
 
-**Mechanical Engineer**
+Mechanical Engineer
 
-**Data Analytics | Business Intelligence | Machine Learning | Python | SQL | Tableau | Computer Vision**
+**Data Analyst | Business Intelligence | Machine Learning | Tableau | Python | SQL**
 
 ---
 
-⭐ *If you found this project interesting, feel free to star the repository.*
+⭐ **If you found this project useful, consider giving the repository a star!**
 
